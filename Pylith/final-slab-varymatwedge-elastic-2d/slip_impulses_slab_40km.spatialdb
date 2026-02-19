@@ -1,0 +1,28 @@
+//
+// This spatial database specifies the patch over which we will compute
+// slip impulses for static Green's functions. We impose impulses over the
+// region 0 to 30 km depth. This is slightly larger than the extent of slip
+// in Step 4 (see `slip_variable.spatialdb`).
+#SPATIAL.ascii 1
+SimpleDB {
+  num-values = 3
+  value-names =  slip_left_lateral  slip_opening    initiation_time
+  value-units =  m  m  year
+  num-locs = 4
+  data-dim = 1 // Data is specified along a line.
+  space-dim = 2
+  cs-data = cartesian {
+    to-meters = 1.0e+3 // Specify coordinates in km for convenience.
+    space-dim = 2
+  } // cs-data
+} // SimpleDB
+// Columns are
+// (1) x coordinate (km)
+// (2) y coordinate (km)
+// (3) Left-lateral slip rate (meters)
+// (4) Fault opening slip rate (meters)
+// (5) Slip initiation time after origin time (year)
+0.0   0.0         1.0   0.0    0.0
+0.0  -40.00         1.0   0.0    0.0
+0.0  -40.01         0.00   0.0    0.0
+0.0  -999999.0     0.00   0.0    0.0
