@@ -1,4 +1,5 @@
-This is the supplementary data for Chong and Lindsey, in review in Geophysical Research Letters. This includes the scripts and examples (from Pylith) to perform inversion on variable material properties of a subduction zone.
+This is the supplementary data for Chong and Lindsey, in review in _Geophysical Research Letters_. This includes the scripts and examples (from Pylith) to perform inversion on variable material properties of a subduction zone.
+For any additional information/request, please contact Jeng Hann, Chong (jenghannchong@gmail.com)
 
 **Scripts folder**
 - MATLAB scripts (necessary scripts needed to run the inversion and plot figures)
